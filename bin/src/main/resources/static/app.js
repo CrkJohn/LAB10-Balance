@@ -34,11 +34,9 @@ var app = (function () {
         stompClient = Stomp.over(socket);
         
         //subscribe to /topic/TOPICXX when connections succeed
-        stompClient.connect({}, function (frame) {
+        stompClient.connect("fdefbwkp","vvXErsBxymMRe3nVIWvpGejZlSwa4F45", function (frame) {
             console.log('Connected: ' + frame);
             stompClient.subscribe('/topic/TOPICXX', function (eventbody) {
-                
-                
             });
         });
 

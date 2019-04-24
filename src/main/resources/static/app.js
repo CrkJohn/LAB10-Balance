@@ -61,7 +61,7 @@ var app = (function () {
         console.info('Connecting to WS...');
         var socket = new SockJS('/stompendpoint');
         stompClient = Stomp.over(socket);
-        stompClient.connect({}, function (frame) {
+        stompClient.connect("fdefbwkp","vvXErsBxymMRe3nVIWvpGejZlSwa4F45", function (frame) {
             console.log('Connected: ' + frame);
             stompClient.subscribe('/topic/newpoint.'+channel, function (eventbody) {
                 var ptn=JSON.parse(eventbody.body);
